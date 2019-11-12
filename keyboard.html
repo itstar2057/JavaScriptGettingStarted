@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>keyboard</title>
+	<style type="text/css">
+		input{
+			height: 45px;
+			width: 800px;
+			border: 2px solid gray;
+			border-width: 4px;
+			font-size: 30px;
+		}
+		button{
+			height: 40px;
+			width: 70px;
+			background-color: black;
+			color: white;
+		}
+		#bdy{
+			background-color: lightgray;
+			width: 900px;
+			height: 300px;
+			border:4px solid gray;
+			margin-left: 180px;
+			margin-top: 110px;
+			padding-left: 80px;
+			padding-top: 40px;
+
+		}
+	</style>
+</head>
+<body style="background-color: lightblue;">
+<div id="bdy">
+	<div>
+		<input type="text" name="" id="p">
+	</div><br>
+<div>
+   	<button onclick="k(1)">1</button>
+   	<button onclick="k(2)">2</button>
+   	<button onclick="k(3)">3</button>
+   	<button onclick="k(4)">4</button>
+   	<button onclick="k(5)">5</button>
+   	<button onclick="k(6)">6</button>
+   	<button onclick="k(7)">7</button>
+   	<button onclick="k(8)">8</button>
+   	<button onclick="k(9)">9</button>
+   	<button onclick="k(0)">0</button>
+   	<button onclick="cut()">cut</button>
+</div>
+<div>
+	<button onclick="k('q')">q</button>
+	<button onclick="k('w')">w</button>
+	<button onclick="k('e')">e</button>
+	<button onclick="k('r')">r</button>
+	<button onclick="k('t')">t</button>
+	<button onclick="k('y')">y</button>
+	<button onclick="k('u')">u</button>
+	<button onclick="k('i')">i</button>
+	<button onclick="k('o')">o</button>
+	<button onclick="k('p')">p</button>
+	<button onclick="k('['')">[</button>
+</div>
+<div>
+	<button onclick="k('a')">a</button>
+	<button onclick="k('s')">s</button>
+	<button onclick="k('d')">d</button>
+	<button onclick="k('f')">f</button>
+	<button onclick="k('g')">g</button>
+	<button onclick="k('h')">h</button>
+	<button onclick="k('j')">j</button>
+	<button onclick="k('k')">k</button>
+	<button onclick="k('l')">l</button>
+	<button onclick="k(';')">;</button>
+	<button onclick="k(''')">'</button>
+</div>
+<div>
+	<button onclick="k('z')">z</button>
+	<button onclick="k('x')">x</button>
+	<button onclick="k('c')">c</button>
+	<button onclick="k('v')">v</button>
+	<button onclick="k('b')">b</button>
+	<button onclick="k('n')">n</button>
+	<button onclick="k('m')">m</button>
+	<button onclick="k(',')">,</button>
+	<button onclick="k('.')">.</button>
+	<button onclick="k('/')">/</button>
+	<button onclick="k('?')">?</button>
+	</div>
+</div>
+	<script type="text/javascript">
+		function k(p){
+     	var already=document.getElementById('p').value;
+     	document.getElementById('p').value=already+p;
+     }
+     function cut(){
+     	var ad=document.getElementById('p').value;
+     	document.getElementById('p').value=ad.substr(0,ad.length-1)
+     }
+	</script>
+
+</body>
+</html>
